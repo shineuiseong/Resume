@@ -22,7 +22,7 @@ font-face {
 @font-face {
   font-family: "Poppins Bold";
   font-style: normal;
-  font-weight: normal;
+  font-weight: bold;
   src: url("./assets/fonts/Poppins-Bold.ttf");
 }
 

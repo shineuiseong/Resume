@@ -8,24 +8,19 @@ const Profile = () => {
 
   const detailrole = [
     "React Dev",
-    "NodeJS Express Dev",
+    "NodeJS Dev",
     "C# WPF Dev"
   ]
+  const githubURL = 'https://github.com/shineuiseong'
   return (
 
     <div className='profile-container'>
       <div className='profile-parent'>
         <div className='profile-details'>
-          <div className='colz'>
-            <div className='colz-icon'>
-              <a href='#'>
-                <i className='fa fa-facebook-square'></i>
-              </a>
-              <a href='#'>
-                <i className='fa fa-google-plus-square'></i>
-              </a>
-              <a href='#'>
-                <i className='fa fa-instargram'></i>
+          <div className='social'>
+            <div className='social-icon'>
+              <a className='btn_shadow' href={githubURL} target="_blank">
+                <i className='fa fa-github-square fa-2x'></i>
               </a>
             </div>
           </div>
@@ -33,7 +28,8 @@ const Profile = () => {
           <div className='profile-details-name'>
             <span className='primary-text'>
               {" "}
-              풀스택을 지향하는  <span className='highlighted-text'> 프론트엔드 개발자 신의성</span>
+              풀스택을 지향하는  <span className='highlighted-text'>Software Engineer</span>
+              <span className='highlighted-text-name'>신의성</span>
             </span>
           </div>
 
@@ -67,7 +63,8 @@ const Profile = () => {
                 />
               </h1>
               <span className='profile-role-tagline'>
-                Front React and Back NodeJs
+                웹 프론트엔드와 백엔드에 관심이 많은 
+                <span className='profile-role-tagline_soft'> 소프트웨어 엔지니어</span>
               </span>
             </span>
           </div>
@@ -85,7 +82,6 @@ const Profile = () => {
         </div>
         <div className='profile-picture'>
           <div className='profile-picture-background'>
-
           </div>
         </div>
       </div>
