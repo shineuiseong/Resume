@@ -23,7 +23,11 @@
     "paths":{
       "@components/*": [
         "./components/*"
+        //"../client/src/components/*"
       ],
+      "@assets/*":[
+        "./assets/*"
+      ]
 
     },
 
@@ -32,6 +36,6 @@
 
   },
   
-  "include": ["src/**/*.tsx",",eslintrc.js"],
+  "include": ["src/**/*.tsx"],
   "exclude": ["node_modules"]
 }

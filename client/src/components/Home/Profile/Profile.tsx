@@ -4,7 +4,14 @@ import {ReactTypical} from '@deadcoder0904/react-typical'
 import ReactTypingEffect from 'react-typing-effect'
 import './Profile.css'
 
-const Profile = () => {
+type IProps={
+
+  className ?:String
+
+}
+
+
+const Profile = ({className}:IProps) => {
 
   const detailrole = [
     "React Dev",
@@ -28,7 +35,9 @@ const Profile = () => {
           <div className='profile-details-name'>
             <span className='primary-text'>
               {" "}
-              풀스택을 지향하는  <span className='highlighted-text'>Software Engineer</span>
+              풀스택을 지향하는
+
+              <span className='highlighted-text'>Software Engineer</span>
               <span className='highlighted-text-name'>신의성</span>
             </span>
           </div>

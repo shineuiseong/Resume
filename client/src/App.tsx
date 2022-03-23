@@ -1,10 +1,13 @@
 import React from 'react';
 import './App.css';
-import Profile from 'PortfolioContainer/Home/Profile';
+import PortfolioContainer from './components/PortfolioContainer'
+
+
+
 function App() {
   return (
     <div className="App">
-      <Profile/>
+      <PortfolioContainer/>
     </div>
   );
 }
