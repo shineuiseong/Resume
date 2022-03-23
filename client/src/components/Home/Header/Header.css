@@ -21,7 +21,7 @@
   .second-title {
     font-size: 60px;
     font-family: "Allan Bold";
-    color: var(--light-yellow);
+    color: var(--dark);
   }
   .header-options {
     display: flex;
@@ -41,7 +41,7 @@
     color:var(--dark)
   }
   .selected-header-option {
-    color: var(--light-yellow);
+    color: var(--dark);
   }
   
   /*IPAD PRO RESPONSIVENESS*/

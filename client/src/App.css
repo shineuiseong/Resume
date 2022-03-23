@@ -16,5 +16,7 @@
   --toast-error: #e44f4ffa;
   --toast-shadow:  #9c9c9ce3;
   --toast-success: #0CBFAE;
-  --loader-color: #0CBFAE
+  --loader-color: #0CBFAE;
+  --light-yellow: #EBEB5E;
+  --dark-grey: #2B2B2B;
 }
