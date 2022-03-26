@@ -78,18 +78,18 @@
     justify-content: center;
     box-shadow: 0 1px 0px 0px var(--white);
     border-radius: 50%;
-    height: 340px;
-    width: 340px;
+    height: 400px;
+    width: 400px;
     margin: 0 0px 0 100px;
 
 }
 .profile-picture-background{
     height: 65%;
     width: 65%;
-    background-image: url('../../../assets/Home/profile.jpg');
+    background-image: url('../../../assets/Home/profile.jpeg');
     background-size: cover;
     border-radius: 50%;
-    background-position: 10% 30%;
+    background-position: 70% 80%;
     background-repeat: no-repeat;
 }
 

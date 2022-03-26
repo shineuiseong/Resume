@@ -28,9 +28,7 @@ const Header = () => {
   const getHeaderOptionsClasses = (index:number) => {
     let classes = 'header-option '
     if (index < TOTAL_SCREENS.length - 1) classes += 'header-option-seperator '
-
     if (selectedScreen === index) classes += 'selected-header-option '
-
     return classes
   }
 
@@ -51,8 +49,8 @@ const Header = () => {
             <FontAwesomeIcon className="header-hamburger-bars " icon={faBars} />
           </div>
           <div className="header-logo ">
-            <span className="first-title ">소프트웨어 엔지니어</span>
-            <span className="second-title "> 신의성</span>
+            <span className="first-title ">Stack</span>
+            <span className="second-title ">Shines</span>
           </div>
           <div className={showHeaderOptions ? 'header-options show-hamburger-options' : 'header-options'}>
             {getHeaderOptions()}
