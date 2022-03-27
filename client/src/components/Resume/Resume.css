@@ -111,6 +111,7 @@
     font-size: 12px;
     text-align: justify;
 }
+
 .heading-date{
     background-color: var(--light-yellow);
     padding: 4px 12px;
@@ -150,11 +151,20 @@
     position: absolute;
     background-color: #1f2235;
 }
-.skill-parent span{
+.skill-parent .heading-bullet-skill {
     font-family: "OstrichSans Black";
     font-size: 16px;
     color: var(--dark-orange);
 }
+.skill-parent .heading-bullet-skill .heading-bullet-skill-percentage{
+
+    color: var(--dark);
+}
+
+.resume-description-text-camera{
+    color:var(--dark-orange);
+}
+
 
 /* IPAD PRO RESPONSIVENESS */
 @media only screen and (max-width: 1110px) {
