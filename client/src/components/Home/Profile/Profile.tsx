@@ -1,6 +1,7 @@
 import React from 'react'
 import ReactTypingEffect from 'react-typing-effect'
 import './Profile.css'
+import ScrollService from 'util/ScrollService';
 
 type IProps={
 
@@ -78,7 +79,11 @@ const Profile = ({className}:IProps) => {
             </span>
           </div>
           <div className='profile-option'>
-            <button className='btn primary-btn'>
+            <button className='btn primary-btn'
+              onClick={()=>{
+                ScrollService.scrollHandler.scrollToHireMe()
+              }}            
+            >
               {""}
               Hire Me{""}
             </button>
