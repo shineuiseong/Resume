@@ -6,13 +6,23 @@ import ReactTypingEffect from 'react-typing-effect'
 import imgBack from '../../assets/Contact/mailz.jpeg'
 import loading from '../../assets/Contact/load2.gif'
 
+
+
 import './ContactMe.css'
 
 import axios from 'axios'
 import { toast } from 'react-toastify'
 
-const ContactMe = (props) => {
-  let fadeInScreenHandler = (screen) => {
+type ScreenProps={
+  fadeInScreen:string |undefined
+  id:string |undefined
+}
+
+
+
+
+const ContactMe = (props:ScreenProps) => {
+  let fadeInScreenHandler = (screen:ScreenProps) => {
     if (screen.fadeInScreen !== props.id) return
     Animations.animations.fadeInScreen(props.id)
   }
@@ -29,17 +39,18 @@ const ContactMe = (props) => {
 
   const githubURL = 'https://github.com/shineuiseong'
 
-  const handleName = (e) => {
+
+  const handleName = (e:React.ChangeEvent<HTMLInputElement>) => {
     setName(e.target.value)
   }
-  const handleEmail = (e) => {
+  const handleEmail = (e:React.ChangeEvent<HTMLInputElement>) => {
     setEmail(e.target.value)
   }
-  const handleMessage = (e) => {
+  const handleMessage = (e:React.ChangeEvent<HTMLTextAreaElement>) => {
     setMessage(e.target.value)
   }
 
-  const submitForm = async (e) => {
+  const submitForm = async (e:React.FormEvent<HTMLFormElement>) => {
     e.preventDefault()
     try {
       let data = {
@@ -69,7 +80,7 @@ const ContactMe = (props) => {
   }
 
   return (
-    <div className="main-container" id={props.id || ''}>
+    <div className="main-container screen-container fade-in" id={props.id || ''}>
       <ScreenHeading subHeading={'Lets Keep In Touch'} title={'Contact Me'} />
       <div className="central-form">
         <div className="col">
@@ -92,7 +103,7 @@ const ContactMe = (props) => {
             <input type="email" onChange={handleEmail} value={email} />
 
             <label htmlFor="message">메시지</label>
-            <textarea type="text" onChange={handleMessage} value={message} />
+            <textarea  onChange={handleMessage} value={message} />
             <div className="send-btn">
               <button type="submit">
                 send

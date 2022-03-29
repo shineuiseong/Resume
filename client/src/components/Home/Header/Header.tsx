@@ -15,7 +15,7 @@ const Header = () => {
     let screenIndex = GET_SCREEN_INDEX(currentScreen.screenInView)
     if (screenIndex < 0) return
   }
-  let currentScreenSubscription = ScrollService.currentScreenBroadcaster.subscribe(updateCurrentScreen)
+  ScrollService.currentScreenBroadcaster.subscribe(updateCurrentScreen)
 
   const getHeaderOptions = () => {
     return TOTAL_SCREENS.map((Screen, i) => (
@@ -43,7 +43,7 @@ const Header = () => {
 
   return (
     <div>
-      <div className="header-container " onClick={() => setShowHeaderOptions(!showHeaderOptions)}>
+      <div className="header-container  " onClick={() => setShowHeaderOptions(!showHeaderOptions)}>
         <div className="header-parent ">
           <div className="header-hamburger" onClick={() => setShowHeaderOptions(!showHeaderOptions)}>
             <FontAwesomeIcon className="header-hamburger-bars " icon={faBars} />

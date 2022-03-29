@@ -68,10 +68,10 @@ const AboutMe = (props:tProps) => {
             <div className="about-me-options ">
               <button className="btn primary-btn" onClick={() => ScrollService.scrollHandler.scrollToHireMe()}>
                 {' '}
-                Let's Discuss!{' '}
+                연락하기!{' '}
               </button>
               <a href="My_CV_2_0.pdf" download="My Portfolio.pdf">
-                <button className="btn highlighted-btn ">Get Portfolio</button>
+                <button className="btn highlighted-btn ">포트폴리오 다운로드</button>
               </a>
             </div>
           </div>

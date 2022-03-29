@@ -82,7 +82,7 @@ const Profile = ({className}:IProps) => {
               {""}
               Hire Me{""}
             </button>
-            <a href='ehizcv.pdf' download='Euiseong ehizcv.pdf'>
+            <a href='Resume.pdf' download='Euiseong Resume.pdf'>
               <button className='btn highlighted-btn'>
                         Get Resume
               </button>
