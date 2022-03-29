@@ -1,6 +1,4 @@
-import React,{FC, useEffect, useState} from 'react'
-import styled from 'styled-components'
-import {ReactTypical} from '@deadcoder0904/react-typical'
+import React from 'react'
 import ReactTypingEffect from 'react-typing-effect'
 import './Profile.css'
 
@@ -26,7 +24,7 @@ const Profile = ({className}:IProps) => {
         <div className='profile-details'>
           <div className='social'>
             <div className='social-icon'>
-              <a className='btn_shadow' href={githubURL} target="_blank">
+              <a className='btn_shadow' href={githubURL} target="_blank" rel="noreferrer">
                 <i className='fa fa-github-square fa-2x'></i>
               </a>
             </div>
@@ -52,6 +50,8 @@ const Profile = ({className}:IProps) => {
                   text={detailrole}
                   speed={300}
                   eraseSpeed={300}
+                  eraseDelay={10}
+                  typingDelay={10}
                   displayTextRenderer={(text, i) => {
                     return (
                       <h1>

@@ -184,6 +184,7 @@
       flex-direction: column;
       align-items: center;
     }
+
   
     .bullets {
       width: 90%;
@@ -213,3 +214,4 @@
       width: 100%;
     }
   }
+
