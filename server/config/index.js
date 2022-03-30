@@ -14,6 +14,10 @@ export default {
     prefix: '/api',
   },
 
+  gmailUser: process.env.GmailUser,
+  gmailPassword: process.env.GmailPassword,
+  gmailMacPassword: process.env.Macpassword,
+
   logs: {
     level: process.env.LOG_LEVEL || 'silly',
   },
