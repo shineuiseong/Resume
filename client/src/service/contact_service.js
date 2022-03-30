@@ -1,4 +1,3 @@
-import { async } from 'rxjs'
 import httpClient from './http_client'
 
 class ContactMe {

@@ -61,7 +61,7 @@ font-face {
 body {
   margin: 0;
   overflow-y: overlay;
-  font-family: "Poppins Regular";
+  font-family: "Montserrat Medium";
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -94,7 +94,7 @@ body ::-webkit-scrollbar-thumb {
   width: 160px;
   cursor: pointer;
   transition: 0.2s;
-  font-family: "Poppins SemiBold";
+  font-family: "Montserrat Medium";
 }
 
 .btn:active {
@@ -104,8 +104,11 @@ body ::-webkit-scrollbar-thumb {
 .primary-btn {
   color: var(--white);
   border: 2px solid linen;
-  font-size: 12px;
+  font-size: 15px;
+  font-family: "Poppins SemiBold";
   background-color: #1f2235;
+  color: var(--white);
+
 }
 /* @media only screen and (max-width: 414px) {
   .primary-btn {
@@ -114,16 +117,25 @@ body ::-webkit-scrollbar-thumb {
 } */
 
 .primary-btn:hover {
-  color: aliceblue;
-  border: 2px solid #ff5823;
-  background-color: #1f2235;
+  color: white;
+  border: 2px solid  var(--dark-orange);
+  background-color:  var(--light-yellow);
+
+  
 }
 
 .highlighted-btn {
-  color: var(--white);
-
+  color: black;
   font-size: 12px;
-  background-color: #ff5823;
+  background-color: var(--light-yellow);
+  font-family: "Poppins SemiBold";
+
+}
+.highlighted-btn:hover{
+  color: white;
+  border: 2px solid #EBEB5E;
+  background-color: var(--dark-orange);
+
 }
 @media only screen and (max-width: 568px) {
   .highlighted-btn {

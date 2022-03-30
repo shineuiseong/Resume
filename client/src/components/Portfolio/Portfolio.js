@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React from 'react'
 import ScreenHeading from 'util/ScreenHeading/ScreenHeading'
 import ScrollService from 'util/ScrollService'
 import Animations from 'util/Animations'
