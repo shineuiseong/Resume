@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import ScreenHeading from 'util/ScreenHeading/ScreenHeading'
 import ScrollService from 'util/ScrollService'
 import Animations from 'util/Animations'
@@ -9,7 +9,6 @@ const Portfolio = (props) => {
     if (screen.fadeInScreen !== props.id) return
     Animations.animations.fadeInScreen(props.id)
   }
-
   ScrollService.currentScreenFadeIn.subscribe(fadeInScreenHandler)
 
   return (

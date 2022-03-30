@@ -37,5 +37,5 @@
   },
   
   "include": ["src/**/*.tsx", "src/components/Resume/Resume.jsx", "src/components/AboutMe/AboutMe.jsx", "src/components/Home/Header/Header.jsx", "src/components/index.js","@types"],
-  "exclude": ["node_modules"]
+  "exclude": ["node_modules","src/setupProxy.ts"]
 }

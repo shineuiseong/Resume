@@ -2,7 +2,6 @@ import React, { useState } from 'react'
 import ScreenHeading from '../../util/ScreenHeading/ScreenHeading'
 import ScrollService from '../../util/ScrollService'
 import Animations from '../../util/Animations'
-import ReactTypingEffect from 'react-typing-effect'
 import imgBack from '../../assets/Contact/mailz.jpeg'
 import loading from '../../assets/Contact/load2.gif'
 
@@ -10,7 +9,7 @@ import loading from '../../assets/Contact/load2.gif'
 
 import './ContactMe.css'
 
-import axios from 'axios'
+import contactMeService from '../../service/contact_service'
 import { toast } from 'react-toastify'
 
 type ScreenProps={
@@ -29,7 +28,6 @@ const ContactMe = (props:ScreenProps) => {
 
   ScrollService.currentScreenFadeIn.subscribe(fadeInScreenHandler)
 
-  const TitleText = ['Get In Touch ']
 
   const [name, setName] = useState('')
   const [email, setEmail] = useState('')
@@ -50,7 +48,11 @@ const ContactMe = (props:ScreenProps) => {
     setMessage(e.target.value)
   }
 
+  //const baseURL = process.env.NODE_ENV === "development" ? API_DEV : "";
+
+
   const submitForm = async (e:React.FormEvent<HTMLFormElement>) => {
+   
     e.preventDefault()
     try {
       let data = {
@@ -60,13 +62,20 @@ const ContactMe = (props:ScreenProps) => {
       }
       setBool(true)
       // 서버통신
-      const res = await axios.post('/contact', data)
+      console.log('inis1')
+      const res = await contactMeService.contact(data)
+
+      console.log('inis2')
+      console.log(res)
       if (name.length === 0 || email.length === 0 || message.length === 0) {
+        console.log('1')
         setBanner(res.data.msg)
         toast.error(res.data.msg)
         setBool(false)
+        console.log('실패')
       } // 성공시
       else if (res.status === 200) {
+        console.log('성공')
         setBanner(res.data.msg)
         toast.success(res.data.msg)
         setBool(false)
