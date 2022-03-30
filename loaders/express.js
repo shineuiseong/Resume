@@ -19,6 +19,11 @@ export default (app) => {
   app.use(express.urlencoded({ extended: true }))
   app.use(cookieParser())
   app.use(express.static(path.join(path.resolve(), 'public')))
+  app.use(express.static(path.join(path.resolve(), 'client/build')))
+
+  app.get('*', (req, res) => {
+    res.sendFile(path.join(__dirname + '/client/build/index.html'))
+  })
 
   app.use(config.api.prefix, routes())
 }
