@@ -13,8 +13,6 @@ class ContactMe {
     }
 
     const res = await this.contactme.post('contact', params)
-    console.log('await ss')
-    console.log(res)
 
     return res
   }
