@@ -1,7 +1,6 @@
 {
   "name": "resume",
   "version": "0.1.0",
-  "proxy": "http://localhost:9000",
   "private": true,
   "dependencies": {
     "@camwiegert/typical": "^0.1.1",

@@ -20,7 +20,7 @@ const AboutMe = (props:tProps) => {
   }
   
   const fadeInSubscription = ScrollService.currentScreenFadeIn.subscribe(fadeInScreenHandler)
-
+  const protfolioUrl = 'https://stackshines.notion.site/stackshines/0c0849f1b80d4692b17470657bae659c'
   const SCREEN_CONSTSANTS = {
     description: '안녕하세요 풀스택 개발자가 목표인 프론트엔드 개발자 신의성 입니다\n',
     descriptionstring:
@@ -63,8 +63,8 @@ const AboutMe = (props:tProps) => {
                 {' '}
                 연락하기!{' '}
               </button>
-              <a href="My_CV_2_0.pdf" download="My Portfolio.pdf">
-                <button className="btn highlighted-btn ">포트폴리오 다운로드</button>
+              <a href={protfolioUrl} target="_blank">
+                <button className="btn highlighted-btn ">포트폴리오 이동</button>
               </a>
             </div>
           </div>

@@ -62,13 +62,12 @@ const ContactMe = (props:ScreenProps) => {
       }
       setBool(true)
       // 서버통신
-      console.log('inis1')
       const res = await contactMeService.contact(data)
 
-      console.log('inis2')
+
       console.log(res)
       if (name.length === 0 || email.length === 0 || message.length === 0) {
-        console.log('1')
+
         setBanner(res.data.msg)
         toast.error(res.data.msg)
         setBool(false)
